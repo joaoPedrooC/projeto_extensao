@@ -206,6 +206,29 @@ header {
       color: #f04e23;
     }
   }
+
+  & > button {
+    display: flex;
+    align-self: center;
+
+    font-weight: 600;
+    color: white;
+    
+    background-color: #f04e23;
+
+    padding: .8rem;
+    border-radius: 8px;
+    border: 1px solid white;
+
+    transition: .6s;
+
+    &:hover {
+      background-color: white;
+      color: #f04e23;
+
+      border: 1px solid #f04e23;
+    }
+  }
 }
 
 .contents__section {
@@ -331,6 +354,90 @@ header {
   }
 }
 
+.feedback__section {
+  background-color: #232A31;
+  color: white;
+
+  padding: 3rem 0;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    & > h2 {
+      font-size: clamp(1.3rem, 5vw, 2rem);
+      font-weight: 500;
+    }
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 1.5rem;
+
+  & > fieldset {
+    width: 100%;
+
+    & > input, textarea {
+      width: 100%;
+      background-color: transparent;
+
+      padding: 1rem;
+
+      border: 1px solid #f04e23;
+      border-radius: 8px;
+
+      font-size: 1rem;
+      font-weight: 200;
+
+      color: white;
+
+      max-width: 100%;
+      resize: none;
+
+      outline: none;
+
+      &:focus {
+        border-color: #fd7e14;
+      }
+    }
+
+    & > label {
+      position: absolute;
+      
+      top: 16.5px;
+      left: 1rem;
+
+      transition: 1s;
+      opacity: .8;
+
+      &.valid {
+        top: -20px;
+        left: .6rem;
+        
+        opacity: 1;
+      }
+    }
+  }
+
+  & > button {
+    background-color: #f04e23;
+    color: white;
+
+    font-weight: 500;
+    font-size: 1rem;
+    
+    padding: 1rem;
+    
+    border: none;
+    border-radius: 8px;
+  }
+}
+
 @media (min-width: 705px) {
   .header__navbar {
     display: flex;
@@ -338,5 +445,11 @@ header {
 
   .header__mobile--nav, .header__mobile--container {
     display: none;
+  }
+
+  .introduction__section > div {
+    & > button {
+      display: none;
+    }
   }
 }
