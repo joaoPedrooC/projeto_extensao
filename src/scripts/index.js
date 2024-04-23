@@ -25,7 +25,6 @@ const handleLabelAnimation = () => {
   })
   // Remove a classe que altera a propriedade TOP da label se o input estiver vazio
   fieldsets.forEach(fieldset => {
-    console.log(fieldset.children[1].value);
     fieldset.children[1].addEventListener('focusout', () => { if(fieldset.children[1].value.length === 0) { fieldset.children[0].classList.remove('valid') } })
   })
 }
