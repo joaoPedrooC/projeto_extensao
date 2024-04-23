@@ -1,4 +1,7 @@
-/* background-color: #232A31; */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+}
 
 .container {
   width: 100%;
@@ -235,9 +238,7 @@ header {
 .contents__list > li {
   display: flex;
   flex-direction: column;
-  
-  flex-shrink: 1;
-  flex-basis: 1;
+
   flex-grow: 1;
   gap: 1.5rem;
   
